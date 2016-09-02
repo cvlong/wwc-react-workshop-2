@@ -5,7 +5,8 @@ export default class QueryExample extends Component {
     console.log(this.props)
     return (
       <div>
-        This is the page
+        This is the page<br />
+        {this.props.location.query.test}
       </div>
     );
   }

@@ -6,6 +6,7 @@ import App from './App';
 import Page from './Page';
 import ParamsExample from './ParamsExample';
 import QueryExample from './QueryExample';
+import FourOhFour from './FourOhFour';
 import './index.css';
 
 ReactDOM.render(
@@ -13,7 +14,10 @@ ReactDOM.render(
     <Route path="/" component={Root}>
         <IndexRoute component={App} />
         <Route path="/page" component={Page} />
+        <Route path="/query" component={QueryExample} />
         <Route path="/post/:id" component={ParamsExample} />
+        // * for anything else
+        <Route path="*" component={FourOhFour} />
     </Route>
   </Router>,
   document.getElementById('root')
